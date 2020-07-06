@@ -111,8 +111,8 @@ Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer l
 ## JOINS
 `JOIN` es de los comandos más utilizados cuando trabajamos con SQL, nos permite encontrar distintos tipos de relaciones entre varias tablas de la BDD. Existen 4 tipos de `JOIN` que pueden utilizarse hasta de 6 maneras distintas:
   - `ÌNNER JOIN` es el `JOIN` más común y devuelve solo aquellas filas cuando haya una coincidencia. Sería el equivalente a usar `BUSCARV`o `VLOOUKUP` en Excel.
- !(PostgreSQL JOINS)[https://sp.postgresqltutorial.com/wp-content/uploads/2018/12/PostgreSQL-Joins.png]
+ ![PostgreSQL JOINS](https://sp.postgresqltutorial.com/wp-content/uploads/2018/12/PostgreSQL-Joins.png)
  
- Consulta (esta liga)[https://www.postgresqltutorial.com/postgresql-joins/] para una explicación más profunda.
+ Consulta [esta liga](https://www.postgresqltutorial.com/postgresql-joins/) para una explicación más profunda.
    
   
