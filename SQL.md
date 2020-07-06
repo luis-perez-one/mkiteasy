@@ -79,7 +79,7 @@ SELECT
    :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
 
  
- ### Distintos valores de una columna agrupados
+ ### COUNT para promedios agrupados
  ```SQL
   SELECT
    SUM(sale_import) AS total_sales
