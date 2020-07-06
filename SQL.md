@@ -117,5 +117,8 @@ Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer l
  Consulta [esta liga](https://www.postgresqltutorial.com/postgresql-joins/) para una explicación más profunda.
  
  ## VIEWS
-   
+ - Una vista o `VIEW` es un subconjunto de la infromación que existe en una tabla. En consecuencia pueden como una herramienta para:
+ --Ayudar a concentrarnos solo en aquellas columnas (variables) de interés. 
+ --Restringir el acceso a datos a cierto perfil de usuarios.
+ - 
   
