@@ -50,7 +50,7 @@ SELECT
    ```
    
 ### Distintos valores de una columna
-Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer los distintos valores de desplazamiento (aka_cilindrada) `displacement` que existen en la tabla, haríamos el siguiente query:
+Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer los distintos valores de desplazamiento (aka_cilindrada) `displacement_cm3` que existen en la tabla, haríamos el siguiente query:
   
  ```SQL
  SELECT 
