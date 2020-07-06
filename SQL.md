@@ -1,6 +1,8 @@
 # SQL 
 
-## Query example
+Motor de BDD: [PostgreSQL](https://www.postgresql.org/)
+
+## SELECT statements
 
 ```SQL
 SELECT
@@ -18,7 +20,7 @@ SELECT
  columnx_name
  
  FROM
-  table
+  table_or_view_name
   
   -- A partir de aquí todo es OPCIONAL 
   -- menos cerrar el statement con ';'
@@ -26,6 +28,7 @@ SELECT
   -- que condiciones deben de cumplir los datos seleccionados
   WHERE
    column4_name == 'some string' AND
+   column20_name IS NOT NULL AND   
    (
     column2_name <= 87.34 OR
     column7_name == True
@@ -46,3 +49,56 @@ SELECT
    ;
    
   ```
+  
+  ## Contar filas de una tabla
+  ### Filas en general
+  Opción 1, no recomendada por desempeño:
+  ```SQL
+  SELECT 
+   COUNT (*)
+  FROM
+   table_or_view_name;
+  ```
+  
+  Opción 2, contar considerando una columna que estamos seguros que contiene datos, por ejemplo la llave primaria:
+  ```SQL
+  SELECT
+   COUNT(id)
+  FROM
+   table_name;
+   ```
+  :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
+   
+  ### Distintos valores de una o varias columna
+   ```SQL
+  SELECT
+   COUNT(DISTINCT column3_name, column4_name)
+  FROM
+   table_or_view_name;
+   ```
+  bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
+ 
+ ### Distintos valores de una columna agrupados
+   ```SQL
+  SELECT
+   SUM(sale_import) AS total_sales
+   COUNT(order_id) AS orders_qty
+   SUM(sale_import) / COUNT(order_id) AS order_avg_import
+   
+  FROM
+   sale;
+   
+  GROUP BY
+   customer_id
+  
+  -- HAVING se usa para especificar una condicion que a diferencia de WHERE 
+  -- aplica a *el resultado de la agrupación de filas* , no a las filas de manera individual
+  
+  HAVING 
+    order_avg_import > 1000
+   
+   ;
+   
+  
+   
+  
