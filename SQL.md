@@ -3,7 +3,7 @@
 Motor de BDD: [PostgreSQL](https://www.postgresql.org/)
 
 ## SELECT statements
-
+### Estructura general
 ```SQL
 SELECT
  column1_name,
@@ -48,7 +48,20 @@ SELECT
    
    ;
    
+ ### Distintos valores de una columna
+ Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer los distintos valores de desplazamiento (aka_cilindrada) `displacement` que existen en la tabla, haríamos el siguiente query:
+  
+  ```SQL
+  SELECT 
+   DISTINC (displacement_cm3)
+  FROM
+   engine;
   ```
+  
+  
+  
+
+ 
   
   ## Contar filas de una tabla
   ### Filas en general
