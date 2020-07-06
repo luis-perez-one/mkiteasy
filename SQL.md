@@ -67,19 +67,20 @@ SELECT
   FROM
    table_name;
    ```
-  :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
+   :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
    
   ### Distintos valores de una o varias columna
-   ```SQL
+ ```SQL
   SELECT
    COUNT(DISTINCT column3_name, column4_name)
   FROM
    table_or_view_name;
-   ```
-  bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
+```
+   :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
+```
  
  ### Distintos valores de una columna agrupados
-   ```SQL
+ ```SQL
   SELECT
    SUM(sale_import) AS total_sales
    COUNT(order_id) AS orders_qty
@@ -96,9 +97,9 @@ SELECT
   
   HAVING 
     order_avg_import > 1000
-   
+    
    ;
-   
+ ```
   
    
   
