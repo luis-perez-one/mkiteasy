@@ -47,40 +47,35 @@ SELECT
     column17_name[DESC]
    
    ;
-   
- ### Distintos valores de una columna
- Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer los distintos valores de desplazamiento (aka_cilindrada) `displacement` que existen en la tabla, haríamos el siguiente query:
-  
-  ```SQL
-  SELECT 
-   DISTINC (displacement_cm3)
-  FROM
-   engine;
-  ```
-  
-  
-  
-
- 
-  
-  ## Contar filas de una tabla
-  ### Filas en general
-  Opción 1, no recomendada por desempeño:
-  ```SQL
-  SELECT 
-   COUNT (*)
-  FROM
-   table_or_view_name;
-  ```
-  
-  Opción 2, contar considerando una columna que estamos seguros que contiene datos, por ejemplo la llave primaria:
-  ```SQL
-  SELECT
-   COUNT(id)
-  FROM
-   table_name;
    ```
-   :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
+   
+### Distintos valores de una columna
+Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer los distintos valores de desplazamiento (aka_cilindrada) `displacement` que existen en la tabla, haríamos el siguiente query:
+  
+ ```SQL
+ SELECT 
+  DISTINC (displacement_cm3)
+ FROM
+  engine;
+ ```
+ ## Contar filas de una tabla
+ ### Filas en general
+ Opción 1, no recomendada por desempeño:
+ ```SQL
+ SELECT 
+  COUNT (*)
+ FROM
+  table_or_view_name;
+ ```
+  
+ Opción 2, contar considerando una columna que estamos seguros que contiene datos, por ejemplo la llave primaria:
+ ```SQL
+ SELECT
+  COUNT(id)
+ FROM
+  table_name;
+  ```
+  :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
    
   ### Distintos valores de una o varias columna
  ```SQL
