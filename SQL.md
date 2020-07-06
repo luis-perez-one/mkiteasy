@@ -121,7 +121,7 @@ Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer l
     * Ayudar a concentrarnos solo en aquellas columnas (variables) de interés. 
     * Restringir el acceso a datos a cierto perfil de usuarios.
  * Pueden actuar como tablas agregadas, donde el motor de la BDD agrega la información a travres de funciones cómo (SUM, AVERAGE, MAX, MIN) y presenta los resultados calculados como parte de la información. 
- * Haciendo uso de (`JOIN`)[https://github.com/ljperez001/mkiteasy/blob/master/SQL.md#joins] las vistas pueden unir y simplificar tablas en una sola tabla virtual.
+ * Haciendo uso de [`JOIN`](https://github.com/ljperez001/mkiteasy/blob/master/SQL.md#joins) las vistas pueden unir y simplificar tablas en una sola tabla virtual.
  * Reducir la complejidad de la información, por ejemplo una vista para `venta2001` y otra para `venta2002`particiona de manera transparente los datos subyacentes. 
   
   :point_up: [referencia](https://en.wikipedia.org/wiki/View_(SQL))
