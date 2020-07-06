@@ -120,10 +120,41 @@ Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer l
  * Una vista o `VIEW` es un subconjunto de la infromación que existe en una tabla. En consecuencia pueden como una herramienta para:
     * Ayudar a concentrarnos solo en aquellas columnas (variables) de interés. 
     * Restringir el acceso a datos a cierto perfil de usuarios.
- * Pueden actuar como tablas agregadas, donde el motor de la BDD agrega la información a travres de funciones cómo (SUM, AVERAGE, MAX, MIN) y presenta los resultados calculados como parte de la información. 
+ * Pueden actuar como tablas agregadas, donde el motor de la BDD agrega la información a travres de funciones cómo (`SUM`, `AVERAGE`, `MAX`, `MIN`, etc) y presenta los resultados calculados como parte de la información. 
  * Haciendo uso de [`JOIN`](https://github.com/ljperez001/mkiteasy/blob/master/SQL.md#joins) las vistas pueden unir y simplificar tablas en una sola tabla virtual.
  * Reducir la complejidad de la información, por ejemplo una vista para `venta2001` y otra para `venta2002`particiona de manera transparente los datos subyacentes. 
   
   :point_up: [referencia](https://en.wikipedia.org/wiki/View_(SQL))
   
+  *Ejemplo de un query statement para crear un VIEW*
+  Considerando el siquiente esquema:
+  
+```SQL
+CREATE VIEW v_articulo_fotografia AS
+
+SELECT
+    t4.nombre AS marca,
+    t3.nombre AS sub_marca,
+    t6.nombre AS solucion,
+    t5.nombre AS sub_solucion,
+    t1.pk AS articulo_k,
+    t1.codigo_fabricante AS codigo_fabricante,
+    t1.descripcion AS descripcion,
+    t2.durl AS durl
+
+FROM 
+    articulo as t1
+    LEFT JOIN articulo_fotografia as t2 ON t1.pk = articulo_fk
+    INNER JOIN sub_marca AS t3 ON t1.sub_marca_fk = t3.pk
+    INNER JOIN marca AS t4 ON t3.marca_fk = t4.pk
+    INNER JOIN sub_solucion AS t5 ON t1.sub_solucion_fk = t5.pk
+    INNER JOIN solucion AS t6 ON t5.solucion_fk = t6.pk
+
+
+WHERE
+    t1.activo = True AND
+    t1.oculto_b2b = False
+
+;
+```
  
