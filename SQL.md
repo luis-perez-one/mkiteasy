@@ -17,7 +17,7 @@ SELECT
  column17_name
  column18_name
  column20_name*column21_name AS total_con_impuestos
- columnx_name
+ columnN_name
  
  FROM
   table_or_view_name
@@ -77,7 +77,7 @@ SELECT
    table_or_view_name;
 ```
    :bulb: Puedes ampliar el statement con clausulas WHERE y ORDER BY
-```
+
  
  ### Distintos valores de una columna agrupados
  ```SQL
