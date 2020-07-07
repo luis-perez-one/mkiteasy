@@ -159,4 +159,4 @@ WHERE
 ;
 ```
 
-:bulb: Si es una vista con la que no estarás interactuando puedes optar por una (`TEMPORARY VIEW`)[https://www.postgresql.org/docs/12/sql-createview.html] que se eliminará de la BDD cuando termine la seisón del usuario. 
+:bulb: Si es una vista con la que no estarás interactuando puedes optar por una [`TEMPORARY VIEW`](https://www.postgresql.org/docs/12/sql-createview.html) que se eliminará de la BDD cuando termine la seisón del usuario. 
