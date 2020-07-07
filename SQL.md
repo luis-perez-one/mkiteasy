@@ -128,7 +128,7 @@ Si tuvieramos un tabla con datos de varios motores `engine` y queremos conocer l
   
   *Ejemplo de un query statement para crear un VIEW*
   Considerando el siquiente esquema:
-  !(diagrama view fotos articulos)[https://i.ibb.co/vZRc6r8/view-articulo-fotografia-SST.png]
+  ![diagrama view fotos articulos](https://i.ibb.co/vZRc6r8/view-articulo-fotografia-SST.png)
   
 ```SQL
 CREATE VIEW v_articulo_fotografia AS
